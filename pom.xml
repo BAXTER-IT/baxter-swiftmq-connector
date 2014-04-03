@@ -10,7 +10,7 @@
 
     <artifactId>baxter-swiftmq-connector</artifactId>
     <name>Baxter SwiftMQ Connector</name>
-    <version>2.1.3.1</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <url>https://repository-baxter.forge.cloudbees.com/private/sites/swiftmq-connector/</url>
 
@@ -18,7 +18,7 @@
         <connection>scm:git:ssh://git@git.cloudbees.com/baxter/baxter-swiftmq-connector.git</connection>
         <developerConnection>scm:git:ssh://git@git.cloudbees.com/baxter/baxter-swiftmq-connector.git</developerConnection>
         <url>ssh://git@git.cloudbees.com/baxter/baxter-swiftmq-connector.git</url>
-        <tag>baxter-swiftmq-connector-2.1.3.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <dependencyManagement>

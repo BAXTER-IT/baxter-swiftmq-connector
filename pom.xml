@@ -113,6 +113,9 @@
                             <execution>
                                 <id>build-deb-installer</id>
                                 <configuration>
+                                    <deb combine.children="append">
+                                        <provides>${unix.package},${connector-type},${connector-type}-${swiftmq.version}</provides>
+                                    </deb>
                                     <assembly combine.children="append">
                                         <copyArtifact>
                                             <artifact>javax.jms:jms-api</artifact>

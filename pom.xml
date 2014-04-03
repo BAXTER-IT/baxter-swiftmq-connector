@@ -12,6 +12,7 @@
 
     <artifactId>baxter-swiftmq-connector</artifactId>
     <name>Baxter SwiftMQ Connector</name>
+    <version>0.0.1-SNAPSHOT</version>
 
     <url>https://repository-baxter.forge.cloudbees.com/private/sites/swiftmq-connector/</url>
 
@@ -159,6 +160,7 @@
     </profiles>
     
     <properties>
+        <!-- Note thi artifact version should be in sync on release -->
         <swiftmq.version>2.1.3</swiftmq.version>
     </properties>
 

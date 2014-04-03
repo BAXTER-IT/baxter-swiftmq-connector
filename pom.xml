@@ -1,21 +1,32 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>com.baxter.jms</groupId>
         <artifactId>baxter-jms-connector</artifactId>
-        <version>1.1.1-SNAPSHOT</version>
+        <version>2.0</version>
     </parent>
 
     <artifactId>baxter-swiftmq-connector</artifactId>
     <name>Baxter SwiftMQ Connector</name>
 
+    <url>https://repository-baxter.forge.cloudbees.com/private/sites/swiftmq-connector/</url>
+
+    <scm>
+        <connection>scm:git:ssh://git@git.cloudbees.com/baxter/baxter-swiftmq-connector.git</connection>
+        <developerConnection>scm:git:ssh://git@git.cloudbees.com/baxter/baxter-swiftmq-connector.git</developerConnection>
+        <url>ssh://git@git.cloudbees.com/baxter/baxter-swiftmq-connector.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
     <dependencyManagement>
 
         <dependencies>
 
-			<dependency>
+            <dependency>
                 <groupId>javax.jms</groupId>
                 <artifactId>jms-api</artifactId>
                 <version>1.1-rev-1</version>
@@ -24,9 +35,8 @@
             <dependency>
                 <groupId>com.swiftmq</groupId>
                 <artifactId>swiftmq-client</artifactId>
-                <version>9.2.5</version>
+                <version>${swiftmq.version}</version>
             </dependency>
-
 
         </dependencies>
 
@@ -48,6 +58,27 @@
     </dependencies>
 
     <profiles>
+
+        <profile>
+            <id>Distribution-CloudBees</id>
+            <distributionManagement>
+                <site>
+                    <id>cloudbees-private-repository</id>
+                    <name>Baxter Projects Site</name>
+                    <url>dav:https://repository-baxter.forge.cloudbees.com/private/sites/swiftmq-connector/</url>
+                </site>
+            </distributionManagement>
+        </profile>
+
+        <profile>
+            <id>Distribution-Baxter</id>
+            <distributionManagement>
+                <site>
+                    <id>qa-apache</id>
+                    <url>scp://qa.baxtersol.bit/var/www/products/swiftmq-connector/</url>
+                </site>
+            </distributionManagement>
+        </profile>
 
         <profile>
             <id>TARGZ</id>
@@ -115,11 +146,20 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>rpm-maven-plugin</artifactId>
+                        <configuration>
+                            <provides combine.children="append">
+                                <provide>${connector-type}-${swiftmq.version}</provide>
+                            </provides>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
         </profile>
 
     </profiles>
+    
+    <properties>
+        <swiftmq.version>2.1.3</swiftmq.version>
+    </properties>
 
 </project>

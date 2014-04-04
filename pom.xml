@@ -8,6 +8,7 @@
         <version>1.0.1</version>
     </parent>
 
+    <groupId>com.baxter.jms</groupId>
     <artifactId>baxter-swiftmq-connector</artifactId>
     <name>Baxter SwiftMQ Connector</name>
     <version>0.0.1-SNAPSHOT</version>

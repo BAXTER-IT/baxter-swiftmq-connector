@@ -3,9 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.baxter.jms</groupId>
-        <artifactId>baxter-jms-connector</artifactId>
-        <version>2.0</version>
+        <groupId>com.baxter</groupId>
+        <artifactId>baxter-connector</artifactId>
+        <version>1.0.1</version>
     </parent>
 
     <artifactId>baxter-swiftmq-connector</artifactId>
@@ -114,7 +114,7 @@
                                 <id>build-deb-installer</id>
                                 <configuration>
                                     <deb combine.children="append">
-                                        <provides>${unix.package},${connector-type},${connector-type}-${swiftmq.version}</provides>
+                                        <provides>${unix.package},${connector-type},baxter-swiftmq-connector-${swiftmq.version}</provides>
                                     </deb>
                                     <assembly combine.children="append">
                                         <copyArtifact>
@@ -150,7 +150,7 @@
                         <artifactId>rpm-maven-plugin</artifactId>
                         <configuration>
                             <provides combine.children="append">
-                                <provide>${connector-type}-${swiftmq.version}</provide>
+                                <provide>baxter-swiftmq-connector-${swiftmq.version}</provide>
                             </provides>
                         </configuration>
                     </plugin>
@@ -162,7 +162,9 @@
     
     <properties>
         <!-- Note thi artifact version should be in sync on release -->
-        <swiftmq.version>2.1.3</swiftmq.version>
+        <swiftmq.version>7.3.0</swiftmq.version>
+        <!-- Samevalue for all JMS Connectors -->
+        <connector-type>baxter-jms-connector</connector-type>
     </properties>
 
 </project>

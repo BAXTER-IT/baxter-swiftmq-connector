@@ -163,7 +163,7 @@
     
     <properties>
         <!-- Note thi artifact version should be in sync on release -->
-        <swiftmq.version>2.1.3</swiftmq.version>
+        <swiftmq.version>7.3.0</swiftmq.version>
         <!-- Samevalue for all JMS Connectors -->
         <connector-type>baxter-jms-connector</connector-type>
     </properties>

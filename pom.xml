@@ -11,7 +11,7 @@
     <groupId>com.baxter.jms</groupId>
     <artifactId>baxter-swiftmq-connector</artifactId>
     <name>Baxter SwiftMQ Connector</name>
-    <version>9.2.7-SNAPSHOT</version>
+    <version>7.3.0-SNAPSHOT</version>
 
     <url>https://repository-baxter.forge.cloudbees.com/private/sites/swiftmq-connector/</url>
 
@@ -163,7 +163,7 @@
     
     <properties>
         <!-- Note thi artifact version should be in sync on release -->
-        <swiftmq.version>7.5.4</swiftmq.version>
+        <swiftmq.version>7.3.0</swiftmq.version>
         <!-- Samevalue for all JMS Connectors -->
         <connector-type>baxter-jms-connector</connector-type>
     </properties>

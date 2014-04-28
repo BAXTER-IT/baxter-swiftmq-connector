@@ -16,11 +16,10 @@
     <url>https://repository-baxter.forge.cloudbees.com/private/sites/swiftmq-connector/</url>
 
     <scm>
-        <connection>scm:git:ssh://git@git.cloudbees.com/baxter/baxter-swiftmq-connector.git</connection>
-        <developerConnection>scm:git:ssh://git@git.cloudbees.com/baxter/baxter-swiftmq-connector.git</developerConnection>
-        <url>ssh://git@git.cloudbees.com/baxter/baxter-swiftmq-connector.git</url>
-      <tag>baxter-swiftmq-connector-9.2.5</tag>
-  </scm>
+        <connection>scm:git:ssh://git@github.com:BAXTER-IT/baxter-swiftmq-connector.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:BAXTER-IT/baxter-swiftmq-connector.git</developerConnection>
+        <url>ssh://git@github.com:BAXTER-IT/baxter-swiftmq-connector.git</url>
+    </scm>
 
     <dependencyManagement>
 

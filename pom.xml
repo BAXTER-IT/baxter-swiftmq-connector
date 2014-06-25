@@ -12,7 +12,7 @@
     <groupId>com.baxter.connector.jms</groupId>
     <artifactId>baxter-swiftmq-connector</artifactId>
     <name>Baxter SwiftMQ Connector</name>
-    <version>7.5.4-SNAPSHOT</version>
+    <version>7.5.4</version>
 
     <url>https://repository-baxter.forge.cloudbees.com/private/sites/swiftmq-connector/</url>
 

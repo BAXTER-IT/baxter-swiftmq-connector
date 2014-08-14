@@ -44,7 +44,13 @@
 
     <dependencies>
 
-        <dependency>
+            <dependency>
+                <groupId>com.tibco</groupId>
+                <artifactId>tibjms</artifactId>
+                <version>${tibjms.version}</version>
+            </dependency>
+            
+            <dependency>
             <groupId>javax.jms</groupId>
             <artifactId>jms-api</artifactId>
         </dependency>
@@ -151,7 +157,7 @@
                         <artifactId>rpm-maven-plugin</artifactId>
                         <configuration>
                             <provides combine.children="append">
-                                <provide>baxter-swiftmq-connector-${swiftmq.version}</provide>
+                                <provide>baxter-swiftmq-connector-${swiftmq.version}-${tibjms.version}</provide>
                             </provides>
                         </configuration>
                     </plugin>
@@ -162,8 +168,9 @@
     </profiles>
     
     <properties>
+        <tibjms.version>6.0.0</tibjms.version>
         <!-- Note thi artifact version should be in sync on release -->
-        <swiftmq.version>${project.version}</swiftmq.version>
+        <swiftmq.version>9.2.5</swiftmq.version>
         <!-- Samevalue for all JMS Connectors -->
         <connector-type>baxter-jms-connector</connector-type>
     </properties>
